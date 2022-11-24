@@ -1,0 +1,35 @@
+pipeline:
+  name: pipinyaml
+  identifier: pipinyaml
+  projectIdentifier: Default_Project_1669294861098
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: gh
+        repoName: test
+        build: <+input>
+  stages:
+    - stage:
+        name: build
+        identifier: build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: pwd
+                  identifier: pwd
+                  spec:
+                    shell: Sh
+                    command: pwd
