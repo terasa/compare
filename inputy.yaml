@@ -1,0 +1,14 @@
+inputSet:
+  identifier: "input"
+  name: "input"
+  orgIdentifier: "default"
+  projectIdentifier: "Default_Project_1669294861098"
+  pipeline:
+    identifier: "pipinyaml"
+    properties:
+      ci:
+        codebase:
+          build:
+            type: "branch"
+            spec:
+              branch: "<+trigger.branch>"
