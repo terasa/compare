@@ -28,8 +28,8 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: pwd2234
+                  name: pwd2
                   identifier: pwd
                   spec:
                     shell: Sh
-                    command: pwd
+                    command: ls
