@@ -13,7 +13,7 @@ pipeline:
   stages:
     - stage:
         name: build
-        identifier: build234
+        identifier: botak
         description: ""
         type: CI
         spec:
