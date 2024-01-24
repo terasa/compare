@@ -13,7 +13,7 @@ pipeline:
   stages:
     - stage:
         name: build
-        identifier: build
+        identifier: build234
         description: ""
         type: CI
         spec:
@@ -33,3 +33,18 @@ pipeline:
                   spec:
                     shell: Sh
                     command: ls
+    - stage:
+        name: run pip
+        identifier: run_pip
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: Build_project1_1669294954139
+          project: Default_Project_1669294861098
+          inputs:
+            identifier: Build_project1_1669294954139
+            properties:
+              ci:
+                codebase:
+                  build: <+input>
